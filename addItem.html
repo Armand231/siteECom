@@ -4,34 +4,34 @@
 	<title>Ajouter Item</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styleId.css">
-</head>
-<body>
-	<h2>Veuillez remplir les informations du nouvel item</h2>
-	<form action="verifVendeur.php" method="post">
+	
+	</head>
+	<body>
+		<h2>Veuillez remplir les informations du nouvel item</h2>
+<form method="POST" action="additem.php" enctype="multipart/form-data">
+
 		<table>
 			<tr><td>Nom:</td>
-				<td><input type="text" name="pseudo"></td>
+				<td><input type="text" name="nom"></td>
 			</tr>
 			<tr>
-				<td>Photos:</td>
 				
-				<td><form enctype="multipart/form-data" action="#" method="post">
-					<input type="hidden" name="MAX_FILE_SIZE" value="250000" />
-					<input type="file" name="fic" size=50 />
-					
-				</form> </td>
-
-
+			
+     <!-- On limite le fichier à 100Ko -->
+    <td> <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+     Fichier : <input type="file" name="avatar"></td>
+     
 
 			</tr>
+
 			<tr><td>Description:</td>
 				<div class="form-group">
-					<td>	<textarea class="form-control" rows="4"></textarea>
+					<td>	<textarea class="form-control" rows="4" name="description"></textarea>
 					</div></td>
 				</tr>
 				<tr>
 					<td>Prix:</td>
-					<td><input type="number" step="0,01" name="email"></td>
+					<td><input type="number" step="0,01" name="prix"></td>
 				</tr>
 
 				<tr>
@@ -50,6 +50,8 @@
 						<input type="submit" name="button2" value="Valider"></td>
 					</tr>
 				</table>
+
 			</form>
+
 		</body>
 		</html>
