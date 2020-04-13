@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajouter Item</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styleId.css">
+</head>
+<body>
+	<h2>Veuillez remplir les informations du nouvel item</h2>
+	<form action="verifVendeur.php" method="post">
+		<table>
+			<tr><td>Nom:</td>
+				<td><input type="text" name="pseudo"></td>
+			</tr>
+			<tr>
+				<td>Photos:</td>
+				
+				<td><form enctype="multipart/form-data" action="#" method="post">
+					<input type="hidden" name="MAX_FILE_SIZE" value="250000" />
+					<input type="file" name="fic" size=50 />
+					
+				</form> </td>
+
+
+
+			</tr>
+			<tr><td>Description:</td>
+				<div class="form-group">
+					<td>	<textarea class="form-control" rows="4"></textarea>
+					</div></td>
+				</tr>
+				<tr>
+					<td>Prix:</td>
+					<td><input type="number" step="0,01" name="email"></td>
+				</tr>
+
+				<tr>
+					<td>Categorie:</td>
+
+					<td><input type="radio" name="typeI" value="Férailles ou Tresor">Férailles ou Tresor<br>
+						<input type="radio" name="typeI" value="Bon pour le musée">Bon pour le musée<br>
+						<input type="radio" name="typeI" value="Accesoire VIP">Accesoire VIP<br>
+					</td>
+
+
+				</tr>
+
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" name="button2" value="Valider"></td>
+					</tr>
+				</table>
+			</form>
+		</body>
+		</html>
