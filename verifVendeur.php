@@ -34,11 +34,11 @@ if (mysqli_num_rows($result) !== 0) {
 	session_start();
         $_SESSION['email'] = $email;
         $_SESSION['pseudo'] = $pseudo;
-        echo 'Vous êtes connecté !';
+        echo 'Vous êtes connecté vous allez etre redirigé dans quelques secondes!';
 $_SESSION['favcolor'] = 'green';
 $_SESSION['animal']   = 'cat';
 $_SESSION['time']     = time(); ?>
-<meta http-equiv="refresh" content="5; URL=localhost/addItem.html">
+<meta http-equiv="refresh" content="5; URL=ajouterItem.html">
 
 
 <?php

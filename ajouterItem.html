@@ -8,7 +8,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="styleId.css">
+	<link rel="stylesheet" type="text/css" href="styleForm.css">
 
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -20,9 +20,9 @@
 <body>
 
 
-<nav class="navbar navbar-expand-md">
-		<a class="navbar-brand" href="#">Ebay ECE</a>
-		<img style=" **margin-top: -55px;**" alt="Logo" src="LogoECE.png" class="pull-left">
+	<nav class="navbar navbar-expand-md">
+		<a class="navbar-brand" href="acceuilP.html">Ebay ECE</a>
+		<img style=" **margin-top: -55px;**" alt="Logo" src="LogoEce.png" class="pull-left">
 		<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -40,7 +40,7 @@
 				</div>
 
 
-				<li class="nav-item"><a class="nav-link " href="#">Acheter</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Achat</a></li>
 				<li class="nav-item"><a class="nav-link" href="idVendeur.html">Vendre</a></li>
 				<li class="nav-item"><a class="nav-link" href="VCompte.html"><img src="icone.png"  width="35" height="35"></a></li>
 
@@ -49,21 +49,21 @@
 			</ul>
 		</div>
 	</nav>
+	<header>
+		<div class="container">
+			<br>
+			<h2>Veuillez remplir les informations du nouvel item</h2>
+			<form method="POST" action="putain.php" enctype="multipart/form-data">
+				<form class="needs-validation" novalidate>
+					<div class="form-row">
+						<div class="col-md-4 mb-3">
 
-	
-	<div class="container">
-		<h2>Veuillez remplir les informations du nouvel item</h2>
-		<form method="POST" action="putain.php" enctype="multipart/form-data">
-			<form class="needs-validation" novalidate>
-				<div class="form-row">
-					<div class="col-md-4 mb-3">
+							<label for="nom">Entrez le nom de votre item</label>
+							<input type="text" class="form-control" id="nom" placeholder="Collection de timbres" required>
+							<div class="valid-feedback">Ok !</div>
+							<div class="invalid-feedback">Valeur incorrecte</div>
 
-						<label for="nom">Entrez le nom de votre item</label>
-						<input type="text" class="form-control" id="nom" placeholder="Collection de timbres" required>
-						<div class="valid-feedback">Ok !</div>
-						<div class="invalid-feedback">Valeur incorrecte</div>
-
-					</div>
+						</div>
 					</div>
 
 					<div class="col-md-4 mb-3">
@@ -103,11 +103,14 @@
 							</div>
 						</div>
 
-					
 
 
-					<button class="btn btn-primary" name="button2" type="submit">Envoyer</button>
-				</form>
+
+						<button class="btn btn-primary" name="button2" type="submit">Envoyer</button>
+					</form>
+				</header>
+</form>
+</div>
 
 				<script>
            /*La fonction principale de ce script est d'empêcher l'envoi du formulaire si un champ a été mal rempli
