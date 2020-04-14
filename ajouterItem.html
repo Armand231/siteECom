@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajouter Item</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styleForm.css">
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.header').height($(window).height());
+		});
+	</script>
+</head>
+
+<body>
+
+
+	<nav class="navbar navbar-expand-md">
+		<a class="navbar-brand" href="acceuilP.html">Ebay ECE</a>
+		<img style=" **margin-top: -55px;**" alt="Logo" src="LogoEce.png" class="pull-left">
+		<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="main-navigation">
+			<ul class="navbar-nav">
+				<li class="nav-item"> <div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+						Catégories
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Férailles ou trésor</a>
+						<a class="dropdown-item" href="#">Bon pour le musée</a>
+						<a class="dropdown-item" href="#">Accessoire VIP</a>
+					</div>
+				</div>
+
+
+				<li class="nav-item"><a class="nav-link" href="#">Achat</a></li>
+				<li class="nav-item"><a class="nav-link" href="idVendeur.html">Vendre</a></li>
+				<li class="nav-item"><a class="nav-link" href="VCompte.html"><img src="icone.png"  width="35" height="35"></a></li>
+
+				<li class="nav-item"><a class="nav-link"  href="#"><img src="panier.png"  width="35" height="35"></a></li>
+				<li class="nav-item"><a class="nav-link" href="adminPage.html">Admin</a></li>
+			</ul>
+		</div>
+	</nav>
+	<header>
+		<div class="container">
+			<br>
+			<h2>Veuillez remplir les informations du nouvel item</h2>
+			<form method="POST" action="ajouterItem.php" enctype="multipart/form-data">
+				<form class="needs-validation" novalidate>
+					<div class="form-row">
+						<div class="col-md-4 mb-3">
+
+							<label for="nom">Entrez le nom de votre item</label>
+							<input type="text" class="form-control" id="nom" placeholder="Collection de timbres" required>
+							<div class="valid-feedback">Ok !</div>
+							<div class="invalid-feedback">Valeur incorrecte</div>
+
+						</div>
+					</div>
+
+					<div class="col-md-4 mb-3">
+						<div class="form-group">
+							<label for="fichier">Fichier</label>
+							<input type="file" class="form-control-file"name="profileImage" id="profileImage" required>
+							<div class="valid-feedback">Ok !</div>
+							<div class="invalid-feedback">Valeur incorrecte</div>
+						</div></div>
+						
+
+
+						<div class="form-group">
+							<div class="col-md-20 mb-5">
+								<label for="bio">Description</label>
+								<textarea class="form-control" id="description" placeholder="Très bon etat...." required></textarea>
+								<div class="valid-feedback">Ok !</div>
+								<div class="invalid-feedback">Valeur incorrecte</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+
+							<label for="categ">Categorie:</label>
+
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="typeI"id="radio1" value="Férailles ou Tresor">
+								<label class="form-check-label" for="radio1">Férailles ou Tresor</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="typeI" id="radio2" value="Bon pour le musée">
+								<label class="form-check-label" for="radio2">Bon pour le musée</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="typeI" id="radio3" value="Accesoire VIP">
+								<label class="form-check-label" for="radio3">Accesoire VIP</label>
+							</div>
+						</div>
+
+
+
+
+						<button class="btn btn-primary" name="button2" type="submit">Envoyer</button>
+					</form>
+				</header>
+</form>
+</div>
+
+				<script>
+           /*La fonction principale de ce script est d'empêcher l'envoi du formulaire si un champ a été mal rempli
+           *et d'appliquer les styles de validation aux différents éléments de formulaire*/
+           (function() {
+           	'use strict';
+           	window.addEventListener('load', function() {
+           		let forms = document.getElementsByClassName('needs-validation');
+           		let validation = Array.prototype.filter.call(forms, function(form) {
+           			form.addEventListener('submit', function(event) {
+           				if (form.checkValidity() === false) {
+           					event.preventDefault();
+           					event.stopPropagation();
+           				}
+           				form.classList.add('was-validated');
+           			}, false);
+           		});
+           	}, false);
+           })();
+       </script>
+   </body>
+   </html>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
