@@ -9,7 +9,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="styleDeletI.css">
 	
-		
+	
 	<script type="text/javascript" src="deleteItemS.js"></script>
 
 	
@@ -56,6 +56,7 @@
 				<th>ID de l'item</th>
 				<th>Nom de l'article</th>
 				<th>Description</th>
+				<th>Photos</th>
 				<th>Prix</th>
 				<th>Categorie</th>
 				<th>Modif</th>
@@ -84,13 +85,16 @@
 
 
 
-								
+							
 
 
 							<tr></td>
 								<td> <?php echo $data['numId']; ?><br/></td>
 								<td> <?php echo $data['nom']; ?><br/></td>
 								<td> <?php echo $data['description']; ?><br/></td>
+							<td>  <img src="<?php echo 'images/'. $data['photos'] ;?>" id="profileDisplay"> <br/></td>
+							 
+
 								<td> <?php echo $data['prix']; ?><br/></td>
 								<td> <?php echo $data['catégorie']; ?>
 								<td><input type="radio" name="choix" ?><br/></td>
@@ -104,10 +108,10 @@
 
 
 			</table>
-<td colspan="2" align="center">
-					<button id="supp" onclick="show()" >Supprimer</button></td>
+			<td colspan="2" align="center">
+				<button id="supp" onclick="show()" >Supprimer</button></td>
 
-								
-					
-		</body>
-		</html>
+				
+				
+			</body>
+			</html>
